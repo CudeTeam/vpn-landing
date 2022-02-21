@@ -78,7 +78,7 @@ button:hover {
   column-gap: 2rem;
 }
 .navbar .container .navbar-menu .navbar-link {
-  color: #4f5665;
+  color: #1d222b;
   position: relative;
   display: flex;
 }
@@ -110,6 +110,43 @@ button:hover {
   border: #f53855 solid 1.5px;
   border-radius: 50px;
   color: #f53855;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.home {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  position: relative;
+}
+.home .container {
+  height: inherit;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.home .container .home-introduction {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.home .container .home-introduction__title, .home .container .home-introduction__desc {
+  color: #0b132a;
+}
+.home .container .home-introduction__button {
+  width: 250px;
+  height: 60px;
+  background-color: #f53838;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
