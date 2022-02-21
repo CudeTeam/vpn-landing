@@ -1,73 +1,65 @@
 .container {
-    max-width: 1200px;
-    width: 90%;
-    @include push-div();
+  max-width: 1200px;
+  width: 90%;
+  @include push-div();
 }
 
 .navbar {
-    height: 5rem;
+  width: 100%;
+  height: 5rem;
+  position: relative;
 
-    .container {
+  .container {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar-menu {
+      line-height: 5rem;
+      display: flex;
+      column-gap: 2rem;
+
+      .navbar-link {
+        color: $primary-link-color;
+        position: relative;
         display: flex;
-        height: inherit;
-        justify-content: space-between;
-        align-items: center;
 
-        .navbar-menu {
-            display: flex;
-            column-gap: 2rem;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          width: 0;
+          height: 2px;
+          border-radius: 50px;
+          background: $primary-color;
 
-            .navbar-item {
-                .navbar-link {
-                    color: $primary-link-color;
-                    position: relative;
-
-                    &::before {
-                        position: absolute;
-                        top: 130%;
-                        bottom: 0;
-                        content: "";
-                        width: 0;
-                        height: 2px;
-                        border-radius: 50px;
-                        background: $primary-color;
-                    }
-
-                    &:hover::before {
-                        animation: line-toggle 1s forwards;
-                    }
-                }
-            }
+          &:hover::before {
+            animation: 100%;
+            transition: all 0.3s linear;
+          }
         }
-
-        .navbar-logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar-button {
-            display: flex;
-
-            a {
-                padding: 0.75rem 2.25rem;
-                color: $secondary-link-color;
-            }
-            .sign-up {
-                border: $primary-light-color solid 1.5px;
-                border-radius: 50px;
-                color: $primary-light-color;
-            }
-        }
+      }
     }
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-button {
+      display: flex;
+
+      a {
+        padding: 0.75rem 2.25rem;
+        color: $secondary-link-color;
+      }
+      .sign-up {
+        border: $primary-light-color solid 1.5px;
+        border-radius: 50px;
+        color: $primary-light-color;
+      }
+    }
+  }
 }
 
-// Keyframes
-@keyframes line-toggle {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 110%;
-    }
-}
