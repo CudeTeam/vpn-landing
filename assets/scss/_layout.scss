@@ -1,0 +1,73 @@
+.container {
+    max-width: 1200px;
+    width: 90%;
+    @include push-div();
+}
+
+.navbar {
+    height: 5rem;
+
+    .container {
+        display: flex;
+        height: inherit;
+        justify-content: space-between;
+        align-items: center;
+
+        .navbar-menu {
+            display: flex;
+            column-gap: 2rem;
+
+            .navbar-item {
+                .navbar-link {
+                    color: $primary-link-color;
+                    position: relative;
+
+                    &::before {
+                        position: absolute;
+                        top: 130%;
+                        bottom: 0;
+                        content: "";
+                        width: 0;
+                        height: 2px;
+                        border-radius: 50px;
+                        background: $primary-color;
+                    }
+
+                    &:hover::before {
+                        animation: line-toggle 1s forwards;
+                    }
+                }
+            }
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-button {
+            display: flex;
+
+            a {
+                padding: 0.75rem 2.25rem;
+                color: $secondary-link-color;
+            }
+            .sign-up {
+                border: $primary-light-color solid 1.5px;
+                border-radius: 50px;
+                color: $primary-light-color;
+            }
+        }
+    }
+}
+
+// Keyframes
+@keyframes line-toggle {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 110%;
+    }
+}

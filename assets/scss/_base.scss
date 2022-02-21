@@ -1,0 +1,67 @@
+// Colors
+$white-color: #ffffff;
+$dark-white-color: #c4c4c4;
+$primary-color: #f53838;
+$primary-light-color: #f53855;
+$secondary-link-color: #0b132a;
+$primary-link-color: #4f5665;
+/*
+* Mixins Placed Here
+* @mixin push-div (center a element)
+*/
+@mixin push-div {
+    margin-right: auto;
+    margin-left: auto;
+}
+// CSS Resets
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+input,
+textarea,
+select,
+button,
+::placeholder {
+    font-family: Roboto, sans-serif;
+    outline: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+button,
+button:focus,
+button:visited,
+button:hover {
+    outline: none;
+    border: none;
+}

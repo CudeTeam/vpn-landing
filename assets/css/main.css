@@ -1,1 +1,185 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+/*
+* Mixins Placed Here
+* @mixin push-div (center a element)
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+input,
+textarea,
+select,
+button,
+::-webkit-input-placeholder {
+  font-family: Roboto, sans-serif;
+  outline: none;
+}
+
+input,
+textarea,
+select,
+button,
+:-ms-input-placeholder {
+  font-family: Roboto, sans-serif;
+  outline: none;
+}
+
+input,
+textarea,
+select,
+button,
+::-ms-input-placeholder {
+  font-family: Roboto, sans-serif;
+  outline: none;
+}
+
+input,
+textarea,
+select,
+button,
+::placeholder {
+  font-family: Roboto, sans-serif;
+  outline: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+button,
+button:focus,
+button:visited,
+button:hover {
+  outline: none;
+  border: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar {
+  height: 5rem;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .container .navbar-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+.navbar .container .navbar-menu .navbar-item .navbar-link {
+  color: #4f5665;
+  position: relative;
+}
+
+.navbar .container .navbar-menu .navbar-item .navbar-link::before {
+  position: absolute;
+  top: 130%;
+  bottom: 0;
+  content: "";
+  width: 0;
+  height: 2px;
+  border-radius: 50px;
+  background: #f53838;
+}
+
+.navbar .container .navbar-menu .navbar-item .navbar-link:hover::before {
+  -webkit-animation: line-toggle 1s forwards;
+          animation: line-toggle 1s forwards;
+}
+
+.navbar .container .navbar-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .container .navbar-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .container .navbar-button a {
+  padding: 0.75rem 2.25rem;
+  color: #0b132a;
+}
+
+.navbar .container .navbar-button .sign-up {
+  border: #f53855 solid 1.5px;
+  border-radius: 50px;
+  color: #f53855;
+}
+
+@-webkit-keyframes line-toggle {
+  from {
+    width: 0;
+  }
+  to {
+    width: 110%;
+  }
+}
+
+@keyframes line-toggle {
+  from {
+    width: 0;
+  }
+  to {
+    width: 110%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
