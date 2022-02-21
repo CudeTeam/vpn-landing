@@ -3,6 +3,7 @@ $white-color: #ffffff;
 $dark-white-color: #c4c4c4;
 $primary-color: #f53838;
 $primary-light-color: #f53855;
+$third-color: #ffecec;
 $secondary-link-color: #0b132a;
 $primary-link-color: #1d222b;
 /*
@@ -29,7 +30,7 @@ html {
 }
 
 body {
-    font-family: Roboto, sans-serif;
+    font-family: Rubik, sans-serif;
 }
 
 input,
@@ -37,7 +38,7 @@ textarea,
 select,
 button,
 ::placeholder {
-    font-family: Roboto, sans-serif;
+    font-family: Rubik, sans-serif;
     outline: none;
 }
 
@@ -64,4 +65,8 @@ button:visited,
 button:hover {
     outline: none;
     border: none;
+}
+
+strong {
+    font-weight: bold;
 }
