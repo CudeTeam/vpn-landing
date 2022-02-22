@@ -171,3 +171,55 @@ main {
         }
     }
 }
+
+// About Section Starts
+.about {
+    width: 100%;
+    height: 500px;
+    position: relative;
+
+    .container {
+        height: inherit;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+
+        .about-content {
+            width: 70%;
+            @include push-div();
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.5rem;
+
+            &__title {
+                font-size: 35px;
+                color: $primary-link-color;
+            }
+
+            &__desc {
+                line-height: 1.8;
+                color: #4F5665;
+            }
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                row-gap: 0.75rem;
+
+                li {
+                    color: #4F5665;
+                    display: flex;
+                    align-items: center;
+                    column-gap: 0.5rem;
+                    
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+// About Section Ends
